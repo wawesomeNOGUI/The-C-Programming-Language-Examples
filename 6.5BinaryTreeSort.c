@@ -1,6 +1,40 @@
 #include "stdio.h"
 
 #define MAXWORD 20
+#define LETTER 'a'
+#define DIGIT '0'
+
+type(c)		/* return type of ASCII character */
+int c;
+{
+	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+		return(LETTER)
+	else if (c >= '0' && c <= '9')
+		return(DIGIT);
+	else
+		return(c);
+}
+
+getword(w, lim)		/* get next word from input */
+char *w;
+int lim;
+{
+	int c, t;
+
+	if (type(c = *w++ = getch()) != LETTER) {
+		*w = '\0';
+		return(c);
+	}
+	while (--lim > 0) {
+		t = type(c = *w++ = getch());
+		if (t != LETTER && t != DIGIT) {
+			ungetch(c);
+			break;
+		}
+	}
+	*(w-1) = '\0';
+	return(LETTER);
+}
 
 struct tnode {      /* the basic node */
 	char *word;     /* points to the text */
