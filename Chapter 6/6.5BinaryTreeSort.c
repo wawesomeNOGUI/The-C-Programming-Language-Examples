@@ -1,7 +1,8 @@
 #include "stdio.h"
 #include "../Chapter 4/4.5GetchUngetch.c"
 #include "../Chapter 5/5.4AllocFree.c"
-
+#include "../Chapter 5/5.5strcpystrcmp.c"
+#include "../Chapter 5/5.6strsave.c"
 
 #define MAXWORD 20
 #define LETTER 'a'
@@ -11,7 +12,7 @@ type(c)		/* return type of ASCII character */
 int c;
 {
 	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-		return(LETTER)
+		return(LETTER);
 	else if (c >= '0' && c <= '9')
 		return(DIGIT);
 	else

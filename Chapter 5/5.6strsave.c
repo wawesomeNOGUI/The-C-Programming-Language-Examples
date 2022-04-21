@@ -1,3 +1,5 @@
+#include "5.4strlen.c"
+
 char *strsave(s)	/* save string s somewhere */
 char *s;
 {
