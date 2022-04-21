@@ -9,6 +9,13 @@ struct tnode {      /* the basic node */
 	struct tnode* right;	/* right child */
 };
 
+struct tnode *talloc()
+{
+	char *alloc();
+
+	return((struct tnode *) alloc(sizeof(struct tnode)));
+}
+
 struct tnode *tree(p, w) /* install w at or below p */
 struct tnode *p;
 char *w;
