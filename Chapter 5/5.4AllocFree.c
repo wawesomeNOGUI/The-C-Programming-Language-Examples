@@ -1,5 +1,5 @@
 #define NULL 0	/* pointer value for error report */
-#define ALLOCSIZE 1000 /* size of available space*/
+#define ALLOCSIZE 100000 /* size of available space*/
 
 static char allocbuf[ALLOCSIZE];	/* storage for alloc */
 static char* allocp = allocbuf;	   /* next free position */
